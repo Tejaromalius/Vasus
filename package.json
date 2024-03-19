@@ -1,0 +1,59 @@
+{
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "author": {
+    "email": "tayefi.ilia@protonmail.com",
+    "name": "Tejaromalius"
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "Vasus.SyncKeyboardColor",
+        "title": "Sync Keyboard Color to Status Bar Color"
+      }
+    ]
+  },
+  "description": "Sync Asus's Keyboard Static Color to Workbench's Status Bar Color",
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@vscode/vsce": "2.24.0"
+  },
+  "displayName": "Vasus",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "icon": "icon.png",
+  "keywords": [
+    "keyboard",
+    "asus",
+    "sync",
+    "color",
+    "status bar"
+  ],
+  "license": "MIT",
+  "licenses": [
+    {
+      "url": "https://github.com/Tejaromalius/Vasus/blob/main/LICENSE"
+    }
+  ],
+  "main": "./extension.js",
+  "name": "vasus",
+  "os": [
+    "linux"
+  ],
+  "publisher": "Tejaromalius",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tejaromalius/Vasus.git"
+  },
+  "scripts": {
+    "test": "vscode-test"
+  },
+  "version": "1.0.0"
+}
