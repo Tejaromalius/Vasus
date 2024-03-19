@@ -7,7 +7,7 @@ Looking for a colorful coding environment while synched with your keyboard color
 
 ### Prerequisites
 
-Before diving into the synchronization magic, ensure that you have the `asusctl` command-line tool installed on your system. If not, you can build and install from their **[main repository]("https://gitlab.com/asus-linux/asusctl")**.
+Before diving into the synchronization magic, ensure that you have the `asusctl` command-line tool installed on your system. If not, you can build and install from their **[main repository](https://gitlab.com/asus-linux/asusctl)**.
 
 For an elevated experience, consider complementing Vasus with the Peacock extension. Peacock allows you to colorize your VS Code workspace, adding another layer of personalization to your development environment. Vasus seamlessly syncs your keyboard color with the active Peacock color, enhancing your coding ambiance.
 
