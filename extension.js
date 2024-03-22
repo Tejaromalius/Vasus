@@ -1,7 +1,7 @@
 const vscode = require('vscode');
 const child_process = require('child_process');
 
-function syncKeyboardColor() {
+async function syncKeyboardColor() {
   const workbenchConfig = vscode.workspace.getConfiguration().inspect('workbench.colorCustomizations');
 
   if (!workbenchConfig || typeof workbenchConfig.workspaceValue !== 'object') {
@@ -27,5 +27,8 @@ function syncKeyboardColor() {
 module.exports.activate = (context) => context.subscriptions.push(
   vscode.commands.registerCommand('Vasus.SyncKeyboardColor', syncKeyboardColor),
   vscode.workspace.onDidChangeConfiguration(syncKeyboardColor),
+  vscode.workspace.onDidChangeWorkspaceFolders(syncKeyboardColor),
+  vscode.window.onDidChangeActiveColorTheme(syncKeyboardColor),
+  vscode.window.onDidChangeVisibleTextEditors(syncKeyboardColor),
   vscode.window.onDidChangeWindowState(syncKeyboardColor),
 );
