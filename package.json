@@ -55,5 +55,8 @@
   "scripts": {
     "test": "vscode-test"
   },
-  "version": "1.0.2"
+  "version": "1.0.3",
+  "extensionDependencies": [
+    "johnpapa.vscode-peacock"
+  ]
 }
