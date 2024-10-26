@@ -1,33 +1,33 @@
 {
+  "name": "vasus",
+  "displayName": "Vasus",
+  "description": "Sync Asus's Keyboard Static Color to Workbench's Status Bar Color",
+  "version": "1.0.4",
+  "publisher": "Tejaromalius",
+  "icon": "icon.png",
+  "license": "MIT",
+  "licenses": [
+    {
+      "url": "https://github.com/Tejaromalius/Vasus/blob/main/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tejaromalius/Vasus.git"
+  },
+  "readme": "README.md",
   "activationEvents": [
     "onStartupFinished"
   ],
-  "author": {
-    "email": "tayefi.ilia@protonmail.com",
-    "name": "Tejaromalius"
-  },
-  "categories": [
-    "Other"
-  ],
-  "contributes": {
-    "commands": [
-      {
-        "command": "Vasus.SyncKeyboardColor",
-        "title": "Sync Keyboard Color to Status Bar Color"
-      }
-    ]
-  },
-  "description": "Sync Asus's Keyboard Static Color to Workbench's Status Bar Color",
-  "devDependencies": {
-    "@types/node": "18.x",
-    "@types/vscode": "^1.87.0",
-    "@vscode/vsce": "2.24.0"
-  },
-  "displayName": "Vasus",
   "engines": {
     "vscode": "^1.87.0"
   },
-  "icon": "icon.png",
+  "os": [
+    "linux"
+  ],
+  "categories": [
+    "Other"
+  ],
   "keywords": [
     "keyboard",
     "asus",
@@ -35,28 +35,41 @@
     "color",
     "status bar"
   ],
-  "license": "MIT",
-  "licenses": [
-    {
-      "url": "https://github.com/Tejaromalius/Vasus/blob/main/LICENSE"
+  "contributes": {
+    "commands": [
+      {
+        "command": "vasus.syncKeyboardColor",
+        "title": "Vasus: Sync Keyboard Color"
+      },
+      {
+        "command": "vasus.toggleSyncKeyboardColor",
+        "title": "Vasus: Toggle Color Sync"
+      }
+    ],
+    "configuration": {
+      "properties": {
+        "vasus.syncEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/Disable Syncing Keyboard Color"
+        }
+      }
     }
-  ],
-  "main": "./extension.js",
-  "name": "vasus",
-  "os": [
-    "linux"
-  ],
-  "publisher": "Tejaromalius",
-  "readme": "README.md",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Tejaromalius/Vasus.git"
   },
+  "extensionDependencies": [
+    "johnpapa.vscode-peacock"
+  ],
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.87.0",
+    "@vscode/vsce": "^2.24.0"
+  },
+  "main": "./extension.js",
   "scripts": {
     "test": "vscode-test"
   },
-  "version": "1.0.3",
-  "extensionDependencies": [
-    "johnpapa.vscode-peacock"
-  ]
+  "author": {
+    "name": "Tejaromalius",
+    "email": "tayefi.ilia@protonmail.com"
+  }
 }
