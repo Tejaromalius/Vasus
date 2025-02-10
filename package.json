@@ -2,7 +2,7 @@
   "name": "vasus",
   "displayName": "Vasus",
   "description": "Sync Asus's Keyboard Static Color to Workbench's Status Bar Color",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "publisher": "Tejaromalius",
   "icon": "icon.png",
   "license": "MIT",
