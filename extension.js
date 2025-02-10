@@ -27,7 +27,7 @@ async function syncKeyboardColor() {
   if (!color) return showWarningMessage();
 
   try {
-    child_process.execSync(`asusctl led-mode static -c ${color}`);
+    child_process.execSync(`asusctl aura static -c ${color}`);
     console.log(`Keyboard color updated to: #${color}`);
   } catch (error) {
     vscode.window.showErrorMessage("Error updating keyboard color");
@@ -84,7 +84,11 @@ function activate(context) {
     vscode.workspace.onDidChangeWorkspaceFolders(syncKeyboardColor),
     vscode.window.onDidChangeActiveColorTheme(syncKeyboardColor),
     // vscode.window.onDidChangeVisibleTextEditors(syncKeyboardColor),
-    vscode.window.onDidChangeWindowState(syncKeyboardColor)
+    // vscode.window.onDidChangeActiveTextEditor(syncKeyboardColor),
+        vscode.window.onDidChangeWindowState((windowState) => {
+    if (windowState.focused) {
+        syncKeyboardColor();
+    }}),
   );
 }
 

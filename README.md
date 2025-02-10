@@ -1,5 +1,7 @@
 ## Vasus VS Code Extension
 
+`After ^1.0.5 update, Vasus relies on Asusctl ^6.11!`
+
 ### Introduction
 
 Vasus extension that allows you to synchronize your Asus keyboard's static color with the color of the status bar in your VS Code workspace. With this extension, you can ensure that your keyboard lighting matches your coding environment, enhancing your productivity and aesthetic experience.
